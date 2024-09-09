@@ -1,5 +1,6 @@
 // src/components/SpeedDialComponent.jsx
 
+import {useState} from 'react';
 import Box from '@mui/material/Box';
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
@@ -34,7 +35,7 @@ const actions = [
 ];
 
 export default function SpeedDialComponent() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 

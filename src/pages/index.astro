@@ -52,6 +52,7 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
         <div class="contact_info_item">
             <i class="fa-solid fa-phone"></i>
             <span>1122223333</span>
+            holas
         </div>
         <div class="contact_info_item">
             <i class="fa-solid fa-envelope"></i>
@@ -71,7 +72,7 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
 
 </section>
 <!-- -- CONTENEDOR GENERAL ------------------------------->
-<SpeedDialComponent  />
+<SpeedDialComponent client:only="react" />
 </DefaultLayout>
 
 <style>
@@ -100,7 +101,7 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-image: url('../img/bg_encabezado.jpg');
+        background-image: url('img/bg_encabezado.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

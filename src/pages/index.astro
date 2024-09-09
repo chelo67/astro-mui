@@ -1,0 +1,182 @@
+---
+import SpeedDialComponent from '../components/SpeedDialComponent';
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+
+---
+<DefaultLayout title="Astro PWA">
+<!-- -- CONTENEDOR GENERAL ------------------------------->
+<section class="contenedor">
+
+<!-- --  CABECERA ------------------------------->
+    <section class="cabecera">
+        <div class="perfil">
+            <div class="foto">
+                <img src="foto_perfil.png" alt=" de perfil">
+            </div>
+
+            <div class="nombre">
+                <h2>Carolina Gonzalez</h2>
+                <h6>Asesora inmobiliaria</h6>
+            </div>
+        </div>
+    </section>
+<!-- -- CABECERA ------------------------------->
+
+<!-- -- CONTACTO ------------------------------->
+    <section class="contacto">
+        <div class="contacto-item">
+            <a href="tel:1122223333" target="_blank">
+                <i class="fa-solid fa-phone fa-xl"></i>
+            </a>
+        </div>
+        <div class="contacto-item">
+            <a href="mailto:6gPjz@example.com" target="_blank">
+                <i class="fa-solid fa-envelope fa-xl"></i>
+            </a>
+        </div>
+        <div class="contacto-item">
+            <a href="mailto:6gPjz@example.com" target="_blank">
+                <i class="fa-solid fa-globe fa-xl"></i>
+            </a>
+        </div>
+        <div class="contacto-item">
+            <a href="mailto:6gPjz@example.com" target="_blank">
+                <i class="fa-solid fa-location-dot fa-xl"></i>
+            </a>
+        </div>
+    </section>
+<!-- -- CONTACTO ------------------------------->
+
+<!-- -- CONTACTO INFO ------------------------------->
+    <section class="contacto_info">
+        <div class="contact_info_item">
+            <i class="fa-solid fa-phone"></i>
+            <span>1122223333</span>
+        </div>
+        <div class="contact_info_item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>correo@correo.com</span>
+        </div>
+        <div class="contact_info_item">
+            <i class="fa-solid fa-globe"></i>
+            <span>www.tuweb.com</span>
+        </div>
+        <div class="contact_info_item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Dirección 2222, Ciudad</span>
+        </div>
+    </section>
+<!-- -- CONTACTO INFO ------------------------------->
+
+
+</section>
+<!-- -- CONTENEDOR GENERAL ------------------------------->
+<SpeedDialComponent client:only="react" />
+</DefaultLayout>
+
+<style>
+    /* estilos generales */
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+   body {
+      
+   }
+   /* contenedor */
+    .contenedor {
+        margin: 0 auto;
+       max-width: 800px;
+       height: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+    /* cabecera */
+    .cabecera {
+        width: 100%;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url(../img/bg_encabezado.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 10px 10px 0 0;
+        margin-top: 8px;
+        margin-inline: 5px;
+
+    }
+    .perfil {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        width: 90%;
+        transform: translateY(100%);
+    }
+    .perfil .foto {
+        width: 30%;
+        height: 100px;
+    }
+    .perfil .foto img {
+        width: 100px;
+        border-radius: 50%;
+        border: 6px solid white;
+    }
+    .perfil .nombre {
+        width: 70%;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .perfil .nombre h2 {
+        font-family: 'Lobster', cursive;
+        font-size: 1.4rem;
+        color:#484848;
+        margin-top: 30px;
+    }
+    .perfil .nombre h6 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.8rem;
+        color:#484848;
+    }
+/* contacto */
+    .contacto {
+        width: 100%;
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;   
+    }
+    .contacto-item {
+        width: 50px;
+        height: 50px;
+        background-color: #484848;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .contacto-item a {
+        color: white;
+        text-decoration: none;
+    }
+    .contacto_info {
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+    .contact_info_item span {
+        font-family: 'Poppins', sans-serif;
+        margin-left: 4px;
+    }
+</style>

@@ -5,8 +5,8 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  // site: 'https://chelo67.github.io',
-  // base: 'base_astro_pwa',
+  site: 'https://chelo67.github.io',
+  base: 'astro-mui',
   vite: {
     logLevel: 'info',
     define: {

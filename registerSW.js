@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('https://chelo67.github.io/base_astro_pwa/sw.js', { scope: '/base_astro_pwa/' })})}

@@ -64,9 +64,7 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
         </div>
         <div class="contact_info_item">
             <i class="fa-solid fa-location-dot"></i>
-            <span>Dirección 2222, Ciudad</span>
-
-            holasssssss
+            <span>Dirección 2222, Ciudad holaaa</span>
         </div>
     </section>
 <!-- -- CONTACTO INFO ------------------------------->
@@ -74,7 +72,7 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
 
 </section>
 <!-- -- CONTENEDOR GENERAL ------------------------------->
-<SpeedDialComponent />
+<SpeedDialComponent client:only="react" />
 </DefaultLayout>
 
 <style>
